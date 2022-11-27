@@ -1,0 +1,65 @@
+.table-des 
+{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 100%; 
+}
+.table-des.half
+{
+    width: 48%;
+    float: left;
+    margin: 20px 1% 30px;
+}
+.table-des td 
+{
+    border-collapse: collapse;
+    border: 1px solid #dfe3e7;
+    padding: 17px 34px;
+    vertical-align: top;
+    line-height: 24px;
+    font-size: 15px; 
+}
+.table-des td ul 
+{
+    margin: 0;
+    padding: 0; 
+}
+.table-des td li 
+{
+    background: url(../images/red-right-arrow.png) 0 7px no-repeat;
+    padding-left: 21px; 
+}
+.table-des td span 
+{
+    margin-right: 15px; 
+}
+.table-des td span img 
+{
+    vertical-align: middle; 
+}
+.table-des th 
+{
+    background: #3ad8d0;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 17px 34px;
+    border: 1px solid #dfe3e7;
+    text-align: left; 
+}
+
+
+.vitural-table 
+{
+    margin-bottom: 30px;
+    border-top: 2px solid #d3d3d3;
+    /*padding-top: 30px;*/ 
+}
+.vitural-table .text p 
+{
+    font-size: 15px;
+    text-align: justify; 
+}
+.vitural-table .incubate
+{
+    padding: 10px 0;
+}
