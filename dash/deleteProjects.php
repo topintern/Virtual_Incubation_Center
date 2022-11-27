@@ -209,21 +209,16 @@ if(isset($_SESSION["id"])){
                     <div class="container-fluid">
                         <?php
                             $pid=$_GET["pid"];
-                            $table="projects";
-                            $query="delete from ".$table." where pid=".$pid;
-                            if(mysqli_query($connection,$query)){
-                               // echo '<a href="investors.php">Successful, Click to go back</a>';
-                            }
-                            else{
-                                echo 'ERROR deleting investor: Try again'.mysqli_error($connection);
-                            } 
-                            $req="delete from mentoring_requests where pid=".$pid;
-                            if(mysqli_query($connection,$req)){
+                            
+                            $req="delete from projects where pid=".$pid;
+
+                            if(mysqli_query($connection,$req)){   
+                                    
                                 echo '<a href="projects.php">Successful, Click to go back</a>';
                             }
                             else{
-                                echo 'ERROR deleting investor: Try again'.mysqli_error($connection);
-                            } 
+                                echo 'ERROR deleting project: Try again'.mysqli_error($connection);
+                            }  
                             mysqli_close($connection);
                         ?>
                     </div>

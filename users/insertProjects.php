@@ -85,8 +85,8 @@
                            
 
                             $table="projects";
-                            $query="insert into $table(title,project_lead,uid,mailId,phno,mentor_req,social_cause,pdf,tech_stack,city,state,description,duration,ROI,investment_needed,intended_audience,developing,pdate)
-                                                    values('$title','$name',$uid,'$email','$phone','$mentor','$social','$pname','$techstack','$city','$state','$desc','$duration','$ROI','$investment','$audience','$stage',now())";
+                            $query="insert into $table(title,project_lead,uid,mailId,phno,mentor_req,social_cause,tech_stack,city,state,description,duration,ROI,investment_needed,intended_audience,developing,pdate)
+                                                    values('$title','$name',$uid,'$email','$phone','$mentor','$social','$techstack','$city','$state','$desc','$duration','$ROI','$investment','$audience','$stage',now())";
                             if(mysqli_query($connection,$query)){
                                 $pid=mysqli_insert_id($connection);
                                 include('../mailing.php');
@@ -108,7 +108,7 @@
                                 //         }
                                 //     }
                                 // }
-                                echo '<a href="addProject.php">Successful, Click to go back</a>';
+                                echo '<a href="project_registeration.php">Successful, Click to go back</a>';
                             }
                             else{
                                 echo 'ERROR: Try again'.mysqli_error($connection);

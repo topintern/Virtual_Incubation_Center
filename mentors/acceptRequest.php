@@ -54,9 +54,13 @@ if(isset($_SESSION["id"])){
                     if(isset($_GET["pid"]) and isset($_GET["mid"])){
                         $pid=$_GET["pid"];
                         $mid=$_GET["mid"];
+                        $query="select title from projects where pid='$pid'";
+                        $result=mysqli_query($connection,$query) or die( mysqli_error($connection));
+                        $row = mysqli_fetch_row($result);  
+                        $title = $row[0];  
                         $accept="CALL mentor_accepts($pid,$mid)";
                         if(mysqli_query($connection,$accept)){
-                            echo "Hurray you have accepted to mentor the project with id".$pid;
+                            echo "Hurray you have accepted to mentor the project ".$title;
                         } 
                         else{
                             echo 'Oops there was an error '.mysqli_error($connection);

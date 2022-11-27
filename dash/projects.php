@@ -250,7 +250,6 @@ if(isset($_SESSION["id"])){
                                     <tbody>
                                         <?php
                                             $table="projects";
-                                            $sql="SELECT * FROM where".$table;
                                             $result = mysqli_query($connection,"SELECT * FROM ".$table." order by pdate desc LIMIT $start_from,$limit") or die( mysqli_error($connection));
                                             $all_property = array();  //declare an array for saving property
                                             
@@ -268,8 +267,13 @@ if(isset($_SESSION["id"])){
                                             while ($row = mysqli_fetch_array($result)) {
                                                 echo "<tr>";
                                                 foreach ($all_property as $item) {
+                                                    if($item=="mentor_req" && $row[$item]==0)
+                                                    echo '<td>' . "No" . '</td>'; //mentor_req is no
+                                                    else if($item=="mentor_req" && $row[$item]==1)
+                                                    echo '<td>' . "Yes" . '</td>'; //mentor_req is yes
+                                                    else
                                                     echo '<td>' . $row[$item] . '</td>'; //get items using property value
-
+                                                    
                                                 }
                                                 echo '<td><form action="deleteProjects.php?pid='.$row["pid"].'" method="post"><input type="submit" value="Delete"></form></td>';
                                                 echo '</tr>';

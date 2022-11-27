@@ -81,6 +81,11 @@
                                             while ($row = mysqli_fetch_array($result)) {
                                                 echo "<tr>";
                                                 foreach ($all_property as $item) {
+                                                    if($item=="mentor_req" && $row[$item]==0)
+                                                    echo '<td>' . "No" . '</td>'; //mentor_req is no
+                                                    else if($item=="mentor_req" && $row[$item]==1)
+                                                    echo '<td>' . "Yes" . '</td>'; //mentor_req is yes
+                                                    else
                                                     echo '<td>' . $row[$item] . '</td>'; //get items using property value
                                                 }
                                                 echo '</tr>';

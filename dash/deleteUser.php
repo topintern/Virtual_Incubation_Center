@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include('../db.php');
 ?>
 <!DOCTYPE html>
@@ -221,23 +222,13 @@ if(isset($_SESSION["id"])){
                     <div class="container-fluid">
                         <?php
                             $uid=$_GET["uid"];
-                            $table="users";
-                            $query="SET FOREIGN_KEY_CHECKS=0";
-                            if(mysqli_query($connection,$query)){}
-                            $query="delete from ".$table." where uid=".$uid."";
-                            if(mysqli_query($connection,$query)){
-                                $query="delete from projects where uid=".$uid;
-                                if(mysqli_query($connection,$query)){
-                                    echo 'Project corresponding to '.$uid.' deleted successfully';
-                                }
-                                else{
-                                    echo 'Unable to delete projects corresponding to the User '.$uid;
-                                }
+                            $query="delete from users where uid=".$uid;
+                            if(mysqli_query($connection,$query)){                                
                                 echo '<a href="users.php">Successful, Click to go back</a>';
                             }
                             else{
-                                echo 'ERROR deleting investor: Try again'.mysqli_error($connection);
-                            } 
+                                echo 'Unable to delete User '.$uid;
+                            }
                             mysqli_close($connection);
                         ?>
                     </div>
