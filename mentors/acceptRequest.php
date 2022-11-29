@@ -58,6 +58,7 @@ if(isset($_SESSION["id"])){
                         $result=mysqli_query($connection,$query) or die( mysqli_error($connection));
                         $row = mysqli_fetch_row($result);  
                         $title = $row[0];  
+                        // call procedure mentor_accepts to perform acceptance of project by mentor in the database
                         $accept="CALL mentor_accepts($pid,$mid)";
                         if(mysqli_query($connection,$accept)){
                             echo "Hurray you have accepted to mentor the project ".$title;

@@ -117,7 +117,7 @@
                                     <i class="fa fa-phone fa-lg"></i>: 918-594-8103<br>
                                     <br>
                                     <i class="fa fa-envelope fa-lg"></i>: <a href=
-                                    "https://mail.google.com/mail/?view=cm&fs=1&to=neilgogte@kmit.in&su=SUBJECT&body=BODY" target="_blank">jpt@cs.okstate.edu</a><br>
+                                    "https://mail.google.com/mail/?view=cm&fs=1&to=jpt@cs.okstate.edu&su=SUBJECT&body=BODY" target="_blank">jpt@cs.okstate.edu</a><br>
                                     <br>
                                     <a class="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/in/johnson-thomas-321a1113" target="_blank"><i class="fa fa-linkedin"></i></a>
                                 </div>

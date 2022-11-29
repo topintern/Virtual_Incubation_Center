@@ -250,9 +250,9 @@ if(isset($_SESSION["id"])){
                                 $message = "<b>Hello ".$name." welcome to VIC, you have been successfully added to our mentorship program under ".$techstack." technology.<br>You will start receiving mentoring requests as soon as users need you.<br>Happy Mentoring!!!! .</b>";
                                 $message .= "<b>Any queries please contact us at virtualincubation@gmail.com</b>";
                                 
-                                $header = "MIME-Version: 1.0\r\n";
-                                $header .= "Content-type: text/html\r\n";
-                                $retval = mail ($email,$subject,$message,$header);
+                                // $header = "MIME-Version: 1.0\r\n";
+                                // $header .= "Content-type: text/html\r\n";
+                                // $retval = mail ($email,$subject,$message,$header);
                             }
                             else{
                                 echo 'ERROR: Try again'.mysqli_error($connection);
